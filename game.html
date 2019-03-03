@@ -10,25 +10,44 @@
     <script src="js/scripts.js"></script> <!--JQuery file-->
     <script src="js/script.js"></script>
 </head>
-<body>
+<body id="gamer">
     <div class="container">
+        <h1 class="jumbotron">Pig Dice Game</h1>
+        <div class="well">
         <div class="row">
-            <div class="col-xs-3"></div>
-            <div class="col-sm-3"></div>
-            <div class="col-md-3"></div>
-            <div class="col-md-3"></div>
+            <div class="column">
+                <div class="row1">
+                <div class="row"><p><span id="p-1"></span></p></div>
+                <div class="row" id="winner-1"></div>
+                <div class="row" id="loser-1"></div>
+                <div class="row" id="1-rolled-1">
+                 <h3 id="1-show-1" class="show1">Sorry, you rolled one!</h3>
+                </div>
+                <div class="row" id="score-1"></div>
+                <div class="row" id="total-1"></div>
+            </div>
         </div>
-        <div class="row">
-          <div class="col-xs-3"></div>
-            <div class="col-sm-3"></div>
-            <div class="col-md-3"></div>
-            <div class="col-md-3"></div>
+            <div class="column" id="show">
+                <div class="row2">
+                <div class="row" id="image"></div>
+                <div class="row" id="roll"><button class="btn-roll" id="roll1">Roll dice</button></div>
+                <div class="row" id="hold"><button class="btn-hold"id="hold1">Hold</button></div>
+                <div class="row" id="newgame"><button class="btn-new" id="new">New game</button></div> 
+            </div>
+            </div>
+            <div class="column">
+                <div class="row3">
+                <div class="row"><p >p><span id="p-2"></span>></p></div>
+                <div class="row" id="winner-2"></div>
+                <div class="row" id="loser-2"></div>
+                <div class="row" id="1-rolled-2">
+                 <h3 id="1-show-2" class="show2">Sorry, you rolled one!</h3>
+                </div>
+                <div class="row" id="score-2"></div>
+                <div class="row" id="total-2"></div>
         </div>
-        <div class="row">
-                <div class="col-xs-3"></div>
-                <div class="col-sm-3"></div>
-                <div class="col-md-3"></div>
-                <div class="col-md-3"></div>
+                </div>
+        </div>
         </div>
     </div>
 </body>

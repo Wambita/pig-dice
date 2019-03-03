@@ -1,28 +1,97 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Pig Dice</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=B612|Quicksand|Raleway|Roboto" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <script src="js/scripts.js"></script> <!--JQuery file-->
-    <script src="js/script.js"></script>
 
-    <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="about.html">About </a>
-            <a href="rules.html" >How To Play</a>
-            <a href="players.html">Play Game </a>
-          </div>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Pig Dice</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=B612|Quicksand|Raleway|Roboto" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <script src="js/scripts.js"></script>
+  <!--JQuery file-->
+  <script src="js/script.js"></script>
+  <script src="js/try.js"></script>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#rules">How To Play</a>
+    <a href="#players">Play Game </a>
+  </div>
 </head>
-<body id="home">
-    
-        <span style="font-size:30px;cursor:pointer;color:white;" onclick="openNav()">&#9776;Pig Dice</span>
-           
-          </head>
-        </body>
-             
-    
+<body>
+  <div id="container">
+        <h1>Pig Dice Game</h1>
+    <div id="rules" class="well">
+        <span style="font-size:30px;cursor:pointer;color:black;" onclick="openNav()">&#9776;Menu</span>
+        <h2 class="jumbotron">How to play pig dice</h2>
+        <ol class="well">
+          <li>Choose a player to go first.</li>
+          <li>That player throws a die and scores as many points as the total shown on the die providing the die doesn’t roll a 1.</li>
+          <li>The player may continue rolling and accumulating points (but risk rolling a 1) or end his turn.</li>
+          <li>If the player rolls a 1 his turn is over, he loses all points he accumulated that turn, and he passes the die to the next player.</li>
+          <li> Play passes from player to player until a winner is determined.</li>
+          <li> The player who scores 100 and above before the other player emerges the winner</li>
+        </ol>
+          <h3> watch the video below to learn how to play pig dice</h3>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/BkhWxm9X2ks" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       <button type="button" name="button" id="players"><a href="#players" class="button"></a>Play Game</button> 
+    </div>
+    <div id="player" class="well">
+      <h2 >Enter the two Players names</h2>
+      <div class="row">
+        <form id="players">
+          <div class="form-group">
+            <label for="player-one">player one</label>
+            <input type="text" class="form-control" id="player-one">
+          </div>
+          <div class="form-group">
+            <label for="player-two">player two</label>
+            <input type="text" class="form-control" id="player-two">
+          </div>
+          <button type="submit" name="button" id="game"><a href="#game" class="button">Next</a></button>
+        </form>
+      </div>
+    </div>
+    <div id="game" class="well">
+            <h2 class="jumbotron">Game</h2>
+        <div class="row">
+          <div class="column">
+            <div class="row1">
+              <div class="row">
+                <p><span id="p-1"></span></p>
+              </div>
+              <div class="row" id="winner-1"></div>
+              <div class="row" id="loser-1"></div>
+              <div class="row" id="1-rolled-1">
+                <h3 id="1-show-1" class="show1">Sorry, you rolled one!</h3>
+              </div>
+              <div class="row" id="score-1"></div>
+              <div class="row" id="total-1"></div>
+            </div>
+          </div>
+          <div class="column" id="show">
+            <div class="row2">
+              <div class="row" id="image"></div>
+              <div class="row" id="roll"><button class="btn-roll" id="roll1">Roll dice</button></div>
+              <div class="row" id="hold"><button class="btn-hold" id="hold1">Hold</button></div>
+              <div class="row" id="newgame"><button class="btn-new" id="new">New game</button></div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="row3">
+              <div class="row">
+                <p><span id="p-2"></span></p>
+              </div>
+              <div class="row" id="winner-2"></div>
+              <div class="row" id="loser-2"></div>
+              <div class="row" id="1-rolled-2">
+                <h3 id="1-show-2" class="show2">Sorry, you rolled one!</h3>
+              </div>
+              <div class="row" id="score-2"></div>
+              <div class="row" id="total-2"></div>
+            </div>
+        </div>
+      </div>
+</body>
