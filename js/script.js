@@ -6,12 +6,7 @@ $(document).ready(function () {
     // $("#rules").show();
   })
 })
-var scores, currentScore, currentPlayer;
-var player = [];
-var currentSlide = 0
-var rollBtn = $("#roll");
-var holdBtn = $("#hold");
-var newGame = $("#newGame");
+
 
 function init() {
   scores = [0, 0];
@@ -29,19 +24,19 @@ function init() {
 var holdRollsArray = [];
 var score = 0;
 function roll() {
-  for (var i = 0; i =0; i ++) {
-    var die = Math.floor(Math.random() * 6) + 1;
+    var die = Math.floor(Math.random() * 6)+1;
     $("#die").text(die)
     holdRollsArray.push(die);
       score1 = score += die;
-      $("#score-1").text(score1)
-      if (die === 1) {
-      
+      $("#score-1").text(score1);
+      var check=holdRollsArray.includes(1);
+
+      if (check === true) {
+        alert("Pass Dice ")
       }
       $("#")
-      $("#total-1").text(core)
+      $("#total-1").text(score)
 
-  }
 }
 roll();
 function hold(){
