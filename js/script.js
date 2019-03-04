@@ -21,26 +21,31 @@ function init() {
   $("#total-1").text(0);
   $("#total-2").text(0);
 }
-var holdRollsArray = [];
+var holdRollsArray = [0];
 var score = 0;
+var total= 0
 function roll() {
     var die = Math.floor(Math.random() * 6)+1;
     $("#die").text(die)
-    holdRollsArray.push(die);
-      score1 = score += die;
-      $("#score-1").text(score1);
+    holdRollsArray.unshift(die);
+    score1=holdRollsArray[0] + die;
+    $("#score-1").text(score1)
+      
       var check=holdRollsArray.includes(1);
 
       if (check === true) {
-        alert("Pass Dice ")
+        alert("Pass Dice ");
+        score2 = holdRollsArray[0] ;
+        score1=holdRollsArray[0] =+ die;
+        $("#roll1").prop('disabled',true);
       }
-      $("#")
-      $("#total-1").text(score)
+      $("#total-1").text(score2)
 
 }
-roll();
 function hold(){
-
+  score1 = score += holdRollsArray[0];
+      $("#score-1").text(score1 );
+  holdRollsArray.length=0;
 }
 
 

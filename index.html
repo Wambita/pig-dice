@@ -9,14 +9,11 @@
   <link href="https://fonts.googleapis.com/css?family=B612|Quicksand|Raleway|Roboto" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-  <script src="js/scripts.js"></script>
-  <!--JQuery file-->
-  <script src="js/script.js"></script>
  
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="#rules">How To Play</a>
-    <a href="#players">Play Game </a>
+    <a href="#gamers">Play Game</a>
   </div>
 </head>
 <body>
@@ -37,63 +34,53 @@
           <iframe width="560" height="315" src="https://www.youtube.com/embed/BkhWxm9X2ks" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
        <button type="button" name="button" id="player"><a href="#players" class="button hidden"></a>Play Game</button> 
     </div>
-    <div class="pig">
-    <div id="player" class="well">
-      <h2 >Enter the two Players names</h2>
-      <div class="row">
-        <form id="players">
-          <div class="form-group">
-            <label for="player-one">player one</label>
-            <input type="text" class="form-control" id="player-one">
-          </div>
-          <div class="form-group">
-            <label for="player-two">player two</label>
-            <input type="text" class="form-control" id="player-two">
-          </div>
-          <button type="submit" name="button" id="game"><a href="#game" class="button">Next</a></button>
-        </form>
-      </div>
-    </div>
-    <div id="game" class="well">
-            <h2 class="jumbotron">Game</h2>
-        <div class="row">
-          <div class="column">
-            <div class="row1">
-              <div class="row">
-                <p>Player 1<span id="p-1"></span></p>
-              </div>
-              <div class="row" id="winner-1"><p id="winner-1"></p></div>
-              <div class="row" id="loser-1"><p id="loser-1"></p></div>
-              <div class="row" id="1-rolled-1">
-                <h3 id="1-show-1" class="show1">Sorry, you rolled one!</h3>
-              </div>
-              <div class="row">Current<p id="score-1"></p></div>
-              <div class="row">Total<p id="total-1"></p></div>
+
+        <div class="well">
+          <form id="gamers">
+              <h1>Enter your Names</h1>
+            <div class="form-group">
+              <label for="gamer1">Player 1</label>
+              <input class="form-control" type="text" id="gamer1">
             </div>
-          </div>
-          <div class="column" id="show">
-            <div class="row2">
-              <div class="row" >Die:<p id="die"></p></div>
-              <div class="row" id="roll"><button class="btn-roll" id="roll1" onclick="roll()">Roll dice</button></div>
-              <div class="row" id="hold"><button class="btn-hold" id="hold1">Hold</button></div>
-              <div class="row" id="newgame"><button class="btn-new" id="new">New game</button></div>
+            <div class="form-group">
+              <label for="gamer2">Player 2</label>
+              <input class="form-control" type="text" id="gamer2">
             </div>
-          </div>
-          <div class="column">
-            <div class="row3">
-              <div class="row"> 
-                <p>Player2<span id="p-2"></span></p>
-              </div>
-              <div class="row"><p id="winner-2"></p></div>
-              <div class="row"><p id="loser-2"></p></div>
-              <div class="row" id="1-rolled-2">
-                <h3 id="1-show-2" class="show2">Sorry, you rolled one!</h3>
-              </div>
-              <div class="row">Current<p id="score-2"></p></div>
-              <div class="row">Total<p id="total-2"></p></div>
-            </div>
-        </div>
+            <button class="btn btn-default" type="submit" form="gamers" id="play">Let's Play!</button>
+          </form>
         </div>
       </div>
-     
+      <div id="game" class="row slide text-center">
+        <div class="col-md-5">
+          <div class="panel panel-default active-0">
+            <div class="panel-body">
+              <h1 class="player-name" id="p1"></h1>
+              <span class="score" id="score0"></span>
+              <div class="scoreboard">
+                <h4>Current Score:</h4><span class="current" id="current0"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <h1>Die </h1>
+          <div id="rollDice"></div>
+          <div class="button-group">
+            <button id="roll" class="btn btn-default">Roll</button>
+            <button id="hold" class="btn btn-default">Hold</button>
+            <button id="newGame" class="btn btn-default">New Game</button>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h1 class="player-name" id="p2"></h1>
+              <span class="score" id="score1"></span>
+              <div class="scoreboard">
+                <h4>Current Score:</h4><span class="current" id="current1"></span>
+      </div>
+      </div>
+      <script src="js/scripts.js"></script>
+      <!--JQuery file-->
+      <script src="js/try.js"></script>
 </body>
