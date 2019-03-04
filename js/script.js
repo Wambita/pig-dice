@@ -1,45 +1,67 @@
-// business logic 
+$(document).ready(function () {
+  $("#mySidenav").click(function () {
+    $("#mySdenav").hide();
+    $(".pig").fadeIn();
+    // $("#rules").slideDown(500);
+    // $("#rules").show();
+  })
+})
+var scores, currentScore, currentPlayer;
+var player = [];
+var currentSlide = 0
+var rollBtn = $("#roll");
+var holdBtn = $("#hold");
+var newGame = $("#newGame");
 
+function init() {
+  scores = [0, 0];
+  currentScore = 0;
+  currentPlayer = 0;
 
+  rollBtn.removeAttr("disabled");
+  holdBtn.removeAttr("disabled");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-$(document).ready(function(){
-$("#game").submit(function(event) {
-    event.preventDefault();
-    var player1 = $("#player-one").val();
-  var player2 = $("#player-two").val();
-  $("#p-1").text(player1.toUpperCase());
-  $("#p-2").text(player2.toUpperCase());
-  
-      if ($("#player-one").val() === "" || $("#player-two").val() === "") {
-        alert("Please fill in your names to continue!");
-      } else {
-        $("#show").hide();
-        $("#show").show();
+  $("#score-1").text(0);
+  $("#score-2").text(0)
+  $("#total-1").text(0);
+  $("#total-2").text(0);
+}
+var holdRollsArray = [];
+var score = 0;
+function roll() {
+  for (var i = 0; i =0; i ++) {
+    var die = Math.floor(Math.random() * 6) + 1;
+    $("#die").text(die)
+    holdRollsArray.push(die);
+      score1 = score += die;
+      $("#score-1").text(score1)
+      if (die === 1) {
+      
       }
-  });
-});
-$(document).ready(function() {
-    $("#mySidenav").click(function() {
-    $("#mySidenav").hide();
-    $("#rules").slideDown(500);
-    $("#rules").show();
-});
-});
+      $("#")
+      $("#total-1").text(core)
+
+  }
+}
+roll();
+function hold(){
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

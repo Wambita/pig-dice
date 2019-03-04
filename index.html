@@ -12,8 +12,7 @@
   <script src="js/scripts.js"></script>
   <!--JQuery file-->
   <script src="js/script.js"></script>
-  <script src="js/try.js"></script>
-
+ 
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="#rules">How To Play</a>
@@ -36,8 +35,9 @@
         </ol>
           <h3> watch the video below to learn how to play pig dice</h3>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/BkhWxm9X2ks" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-       <button type="button" name="button" id="players"><a href="#players" class="button"></a>Play Game</button> 
+       <button type="button" name="button" id="player"><a href="#players" class="button hidden"></a>Play Game</button> 
     </div>
+    <div class="pig">
     <div id="player" class="well">
       <h2 >Enter the two Players names</h2>
       <div class="row">
@@ -62,19 +62,19 @@
               <div class="row">
                 <p><span id="p-1"></span></p>
               </div>
-              <div class="row" id="winner-1"></div>
-              <div class="row" id="loser-1"></div>
+              <div class="row" id="winner-1"><p id="winner-1"></p></div>
+              <div class="row" id="loser-1"><p id="loser-1"></p></div>
               <div class="row" id="1-rolled-1">
                 <h3 id="1-show-1" class="show1">Sorry, you rolled one!</h3>
               </div>
-              <div class="row" id="score-1"></div>
-              <div class="row" id="total-1"></div>
+              <div class="row"><p id="score-1"></p></div>
+              <div class="row"><p id="total-1"></p></div>
             </div>
           </div>
           <div class="column" id="show">
             <div class="row2">
-              <div class="row" id="image"></div>
-              <div class="row" id="roll"><button class="btn-roll" id="roll1">Roll dice</button></div>
+              <div class="row" >Die:<p id="die"></p></div>
+              <div class="row" id="roll"><button class="btn-roll" id="roll1" onclick="roll()">Roll dice</button></div>
               <div class="row" id="hold"><button class="btn-hold" id="hold1">Hold</button></div>
               <div class="row" id="newgame"><button class="btn-new" id="new">New game</button></div>
             </div>
@@ -84,14 +84,16 @@
               <div class="row">
                 <p><span id="p-2"></span></p>
               </div>
-              <div class="row" id="winner-2"></div>
-              <div class="row" id="loser-2"></div>
+              <div class="row"><p id="winner-2"></p></div>
+              <div class="row"><p id="loser-2"></p></div>
               <div class="row" id="1-rolled-2">
                 <h3 id="1-show-2" class="show2">Sorry, you rolled one!</h3>
               </div>
-              <div class="row" id="score-2"></div>
-              <div class="row" id="total-2"></div>
+              <div class="row"><p id="score-2"></p></div>
+              <div class="row"><p id="total-2"></p></div>
             </div>
         </div>
+        </div>
       </div>
+     
 </body>
