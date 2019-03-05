@@ -6,83 +6,94 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Pig Dice</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=B612|Quicksand|Raleway|Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cinzel|Raleway|Shadows+Into+Light" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#rules">How To Play</a>
-    <a href="#gamers">Play Game</a>
-  </div>
+  <div class="row">
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#rules">How To Play</a>
+      <a href="#gamers">Play Game</a>
+    </div>
 </head>
 
-<body>
+<body id="body">
   <div id="container">
-    <h1>Pig Dice Game</h1>
-    <div id="rules" class="well">
-      <span style="font-size:30px;cursor:pointer;color:black;" onclick="openNav()">&#9776;Menu</span>
-      <h2 class="jumbotron">How to play pig dice</h2>
-      <ol class="well">
-        <li>Choose a player to go first.</li>
-        <li>That player throws a die and scores as many points as the total shown on the die providing the die doesn’t roll a 1.</li>
-        <li>The player may continue rolling and accumulating points (but risk rolling a 1) or end his turn.</li>
-        <li>If the player rolls a 1 his turn is over, he loses all points he accumulated that turn, and he passes the die to the next player.</li>
-        <li> Play passes from player to player until a winner is determined.</li>
-        <li> The player who scores 100 and above before the other player emerges the winner</li>
-      </ol>
-      <h3> watch the video below to learn how to play pig dice</h3>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/BkhWxm9X2ks" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <button type="button" name="button" id="player"><a href="#players" class="button hidden"></a>Play Game</button>
+    <div class="row">
+      <div class="col-sm-2">
+      </div>
+      <div class="col-md-8">
+        <span style="font-size:30px;cursor:pointer;color:black;" onclick="openNav()">&#9776;Menu</span>
+        <h1>Pig Dice Game</h1>
+        <div id="rules" class="well">
+          <h2>How to play pig dice</h2>
+          <ol class="well">
+            <li>Choose a player to go first.</li>
+            <li>That player throws a die and scores as many points as the total shown on the die providing the die doesn’t roll a 1.</li>
+            <li>The player may continue rolling and accumulating points (but risk rolling a 1) or end his turn.</li>
+            <li>If the player rolls a 1 his turn is over, he loses all points he accumulated that turn, and he passes the die to the next player.</li>
+            <li> Play passes from player to player until a winner is determined.</li>
+            <li> The player who scores 100 and above before the other player emerges the winner</li>
+          </ol>
+          <h3> watch the video below to learn how to play pig dice</h3>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/BkhWxm9X2ks" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <button type="button" name="button" id="player"><a href="#players" class="button hidden"></a>Play Game</button>
+        </div>
+        <form id="gamers" class="well">
+          <h1>Enter Players Names</h1>
+          <div class="form-group">
+            <label for="gamer1">Player 1</label>
+            <input class="form-control" type="text" id="gamer1">
+          </div>
+          <div class="form-group">
+            <label for="gamer2">Player 2</label>
+            <input class="form-control" type="text" id="gamer2">
+          </div>
+          <button class="btn btn-default" type="submit" form="gamers" id="play">OK</button>
+        </form>
+      </div>
     </div>
-
     <div class="well">
-      <form id="gamers">
-        <h1>Enter Players Names</h1>
-        <div class="form-group">
-          <label for="gamer1">Player 1</label>
-          <input class="form-control" type="text" id="gamer1">
+      <h1>Pig Dice Game</h1>
+      <div id="game" class="row slide text-center">
+        <div class="col-md-5">
+          <div class="panel panel-default active-0">
+            <div class="panel-body">
+              <h1 class="player-name" id="p1"></h1>
+              <span class="score" id="score0"></span>
+              <div class="scoreboard">
+                <h4>Current Score:</h4><span class="current" id="current0"></span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="gamer2">Player 2</label>
-          <input class="form-control" type="text" id="gamer2">
-        </div>
-        <button class="btn btn-default" type="submit" form="gamers" id="play">OK</button>
-      </form>
-    </div>
-  </div>
-  <h1 class="well">Pig Dice Game</h1>
-  <div id="game" class="row slide text-center">
-    <div class="col-md-5">
-      <div class="panel panel-default active-0">
-        <div class="panel-body">
-          <h1 class="player-name" id="p1"></h1>
-          <span class="score" id="score0"></span>
-          <div class="scoreboard">
-            <h4>Current Score:</h4><span class="current" id="current0"></span>
+        <div>
+          <div class="col-md-2">
+            <h1>Die</h1>
+            <div id="dice"></div>
+            <div class="button-group">
+              <button id="roll" class="roll">Roll</button>
+              <button id="hold" class="hold">Hold</button>
+              <button id="newGame" class="hold">New Game</button>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <h1 class="player-name" id="p2"></h1>
+                <span class="score" id="score1"></span>
+                <div class="board">
+                  <h4>Current Score:</h4><span class="current" id="current1"></span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-2">
-      <h1>Die </h1>
-      <div id="rollDice"></div>
-      <div class="button-group">
-        <button id="roll" class="btn btn-default">Roll</button>
-        <button id="hold" class="btn btn-default">Hold</button>
-        <button id="newGame" class="btn btn-default">New Game</button>
-      </div>
-    </div>
-    <div class="col-md-5">
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <h1 class="player-name" id="p2"></h1>
-          <span class="score" id="score1"></span>
-          <div class="scoreboard">
-            <h4>Current Score:</h4><span class="current" id="current1"></span>
-          </div>
+      <div class="col-md-2">
         </div>
-        <script src="js/scripts.js"></script>
-        <!--JQuery file-->
-        <script src="js/script.js"></script>
+    </div>
+    <script src="js/scripts.js"></script>
+    <!--JQuery file-->
+    <script src="js/script.js"></script>
 </body>

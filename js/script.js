@@ -29,7 +29,7 @@ function init() {
 
 function roll() {
   var die = Math.floor(Math.random() * 6) + 1;
-  $("#rollDice").text(die);
+  $("#dice").text(die);
   if (die === 1) {
     alert("Sorry " + player[currentPlayer] + ", you rolled a one!");
     currentScore = 0;
@@ -79,8 +79,8 @@ $(document).ready(function() {
   $("#gamers").submit(function(e) {
     player[0] = $("#gamer1").val();
     player[1] = $("#gamer2").val();
-    $("#p1").text(player[0].toUpperCase());
-    $("#p2").text(player[1].toUpperCase());
+    $("#p1").text(player[0]);
+    $("#p2").text(player[1]);
     if ($("#gamer1").val() === "" || $("#gamer2").val() === "") {
       alert("Please Enter both players names to continue!!!");
     } else {
